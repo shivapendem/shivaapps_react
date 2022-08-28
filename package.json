@@ -15,7 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cruip/open-react-template.git"
+    "url": "https://github.com/shivapendem/shivaapps_react.git"
+    //"url": "https://github.com/cruip/open-react-template.git"
   },
   "scripts": {
     "predepoly":"npm run build",

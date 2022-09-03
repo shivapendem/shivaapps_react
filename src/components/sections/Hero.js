@@ -69,11 +69,11 @@ const Hero = ({
                 </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/" style={{height: "72px"}}>
+                  <Button tag="a" color="primary" wideMobile href="/about" style={{height: "72px"}}>
                     Comtinue Exploring
                     <br/>About me,
                     </Button> 
-                  <Button tag="a" color="dark" wideMobile href="/contac" style={{height: "72px"}}>
+                  <Button tag="a" color="dark" wideMobile href="/contact" style={{height: "72px"}}>
                     Intrested? <br/>
                     Contact me
                     </Button>

@@ -14,7 +14,7 @@ const defaultProps = {
 
 
 
-const ContactSplit = ({
+const AboutView = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -87,7 +87,7 @@ const  handleSubmit= async (event) => {
   );
 
   const sectionHeader = {
-    title: 'Contact Us',
+    title: 'About Me',
     paragraph: 'i am ready to help you out in all the areas available.'
   };
 
@@ -183,7 +183,7 @@ const  handleSubmit= async (event) => {
 }
 
 
-ContactSplit.propTypes = propTypes;
-ContactSplit.defaultProps = defaultProps;
+AboutView.propTypes = propTypes;
+AboutView.defaultProps = defaultProps;
 
-export default ContactSplit;
+export default AboutView;

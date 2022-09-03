@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -12,9 +12,7 @@ const defaultProps = {
   ...SectionSplitProps.defaults
 }
 
-
-
-const ContactSplit = ({
+const PageNotFound = ({
   className,
   topOuterDivider,
   bottomOuterDivider,
@@ -28,41 +26,6 @@ const ContactSplit = ({
   imageFill,
   ...props
 }) => {
-
-  const [name, setName] = useState("test name");
-  const [email, setEmail] = useState("suppor@gmail.com");
-  const [message, setMessage] = useState("sample name ");
-
-  const  onNameChange= async (event) => {
-    setName( event.target.value);
-  };
-const  onEmailChange= async (event) => {
-    setEmail( event.target.value);
-  };
-const  onMessageChange= async (event) => {
-    setMessage(event.target.value)
-  };
-const  handleSubmit= async (event) => {
-    event.preventDefault();
-    console.log(name);
-    fetch('https://shivaappsbackend-shivapendem.vercel.app/', {
-        method: "POST",
-        body: JSON.stringify({"name":name,"email":email,"message":message}),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-      }).then(
-      (response) => (response.json())
-        ).then((response)=> {
-      if (response.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if(response.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
-  }
 
   const outerClasses = classNames(
     'features-split section',
@@ -87,8 +50,8 @@ const  handleSubmit= async (event) => {
   );
 
   const sectionHeader = {
-    title: 'Contact Us',
-    paragraph: 'i am ready to help you out in all the areas available.'
+    title: 'Page Not Found',
+    paragraph: 'We are sorry, the page you requested could not be found'
   };
 
   return (
@@ -100,21 +63,28 @@ const  handleSubmit= async (event) => {
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
           <div className={splitClasses}>
+            <div>
+               <Image
+                  src="https://img.freepik.com/free-vector/glitch-error-404-page_23-2148105404.jpg?w=2000"
+                  alt="Features split 02"
+                  width={528}
+                  height={396} />
+            </div>
 
+            
 
             <div className="split-item">
-              <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
+              <div className="split-item-content center-content-mobile reveal-from-right" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  My articles in Medium
+                  Multi platform Experience
                   </div>
                 <h3 className="mt-0 mb-12">
-                  Considering all my areas of work experiences
+                  every platform is known
                   </h3>
                 <p className="m-0">
-                  I published various articles in medium from normal text field to a full detailed wallet api service for a evm chain account , also shared articles with respect to bot developemnt in multiple platforms.
+                  Starting from game development, i moved to a web developer followed by a Mobile Application developer, After the complete understanding and requests i started to work on the server backend technologies and changed back to web Developer, BlockChain is the upcoming and growing up with the new trends, I started to work in Block chain industry and still continuing in the same.
                   </p>
-                  <br/>
-                  <a href="https://shivapendem.medium.com/" target="_blank"> view</a>
+                  <a href="https://play.google.com/store/apps/developer?id=Shiva+Apps" target="_blank"> PlayStore</a> <a href="https://www.npmjs.com/~shivapendem" target="_blank"> NpmJs</a>
               </div>
               <div className={
                 classNames(
@@ -123,32 +93,12 @@ const  handleSubmit= async (event) => {
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/features-split-image-01.png')}
-                  alt="Features split 01"
+                  src={require('./../../assets/images/features-split-image-02.png')}
+                  alt="Features split 02"
                   width={528}
                   height={396} />
               </div>
-
             </div>
-
-            <div className="split-item">
-              <form id="contact-form" method="POST" onSubmit={handleSubmit.bind(this)}>
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" aria-describedby="emailHelp" />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea className="form-control" rows="5"></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form>  
-            </div>
-
 
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
@@ -183,8 +133,7 @@ const  handleSubmit= async (event) => {
   );
 }
 
+PageNotFound.propTypes = propTypes;
+PageNotFound.defaultProps = defaultProps;
 
-ContactSplit.propTypes = propTypes;
-ContactSplit.defaultProps = defaultProps;
-
-export default ContactSplit;
+export default PageNotFound;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
-
+//import { toast } from "react-toastify";
 const propTypes = {
   ...SectionSplitProps.types
 }
@@ -45,7 +45,7 @@ const  onMessageChange= async (event) => {
 const  handleSubmit= async (event) => {
     event.preventDefault();
     console.log(name);
-    fetch('https://shivaappsbackend-shivapendem.vercel.app/', {
+    fetch('https://intelligence.shivaapps.in/submitrequest/', {
         method: "POST",
         body: JSON.stringify({"name":name,"email":email,"message":message}),
         headers: {
@@ -53,16 +53,26 @@ const  handleSubmit= async (event) => {
           'Content-Type': 'application/json'
         },
       }).then(
+
       (response) => (response.json())
         ).then((response)=> {
-      if (response.status === 'success') {
+          console.log(response);
+          console.log(response.message);
+      if (response.message == 'success') {
         alert("Message Sent.");
-        this.resetForm()
-      } else if(response.status === 'fail') {
-        alert("Message failed to send.")
+         setName("");
+         setEmail("");
+         setMessage("");
+         //toast.success("please unlock your TronLink wallet");
+      } else if(response.message == 'fail') {
+        alert("Message failed to send.");
+        setName("");
+        setEmail("");
+        setMessage("");
+        //toast.warn("please install TronLink wallet");
       }
     })
-  }
+};
 
   const outerClasses = classNames(
     'features-split section',
@@ -125,15 +135,15 @@ const  handleSubmit= async (event) => {
                 <form id="contact-form" method="POST" onSubmit={handleSubmit.bind(this)}>
                 <div className="form-group">
                     <label htmlFor="name" className='text-xxs'>Name</label>
-                    <input type="text" className="form-control" placeholder='Your Name' />
+                    <input type="text" className="form-control" placeholder='Your Name' onKeyUp={(event) => {setName(event.target.value);}} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1" className='text-xxs'>Email address</label>
-                    <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' />
+                    <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' onKeyUp={(event) => {setEmail(event.target.value);}} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="message" className='text-xxs'>Message</label>
-                    <textarea className="form-control" rows="5" placeholder='Your Message / Query'></textarea>
+                    <textarea className="form-control" rows="5" placeholder='Your Message / Query' onKeyUp={(event) => {setMessage(event.target.value);}}   ></textarea>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form> 

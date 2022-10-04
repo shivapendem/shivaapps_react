@@ -45,7 +45,7 @@ const  onMessageChange= async (event) => {
 const  handleSubmit= async (event) => {
     event.preventDefault();
     console.log(name);
-    fetch('https://shivaappsbackend-shivapendem.vercel.app/', {
+    fetch('https://intelligence.shivaapps.in/submitrequest/', {
         method: "POST",
         body: JSON.stringify({"name":name,"email":email,"message":message}),
         headers: {
@@ -55,6 +55,7 @@ const  handleSubmit= async (event) => {
       }).then(
       (response) => (response.json())
         ).then((response)=> {
+          console.log(response);
       if (response.status === 'success') {
         alert("Message Sent.");
         this.resetForm()

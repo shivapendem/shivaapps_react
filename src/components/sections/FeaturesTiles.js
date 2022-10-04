@@ -162,7 +162,7 @@ const FeaturesTiles = ({
                     Robust Workflow
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    We present an innovative workflow for the statistical analysis of fracture data collected along scanlines, composed of two major stages,
                     </p>
                 </div>
               </div>
@@ -184,7 +184,7 @@ const FeaturesTiles = ({
                     Tailored To Your Ideas
                     </h4>
                   <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                    We are into various areas of work, and we will rebuild your ideas for a great change
                     </p>
                 </div>
               </div>

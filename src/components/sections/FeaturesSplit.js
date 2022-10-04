@@ -99,7 +99,7 @@ const FeaturesSplit = ({
                   Multi platform Experience
                   </div>
                 <h3 className="mt-0 mb-12">
-                  every platform is known
+                  Every platform is known
                   </h3>
                 <p className="m-0">
                   Starting from game development, i moved to a web developer followed by a Mobile Application developer, After the complete understanding and requests i started to work on the server backend technologies and changed back to web Developer, BlockChain is the upcoming and growing up with the new trends, I started to work in Block chain industry and still continuing in the same.

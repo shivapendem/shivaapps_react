@@ -84,7 +84,7 @@ const PageNotFound = ({
                 <p className="m-0">
                   Starting from game development, i moved to a web developer followed by a Mobile Application developer, After the complete understanding and requests i started to work on the server backend technologies and changed back to web Developer, BlockChain is the upcoming and growing up with the new trends, I started to work in Block chain industry and still continuing in the same.
                   </p>
-                  <a href="https://play.google.com/store/apps/developer?id=Shiva+Apps" target="_blank"> PlayStore</a> <a href="https://www.npmjs.com/~shivapendem" target="_blank"> NpmJs</a>
+                  <a href="https://play.google.com/store/apps/developer?id=Shiva+Apps" target="_blank"  rel="noopener noreferrer"> PlayStore</a> <a href="https://www.npmjs.com/~shivapendem" target="_blank"  rel="noopener noreferrer"> NpmJs</a>
               </div>
               <div className={
                 classNames(

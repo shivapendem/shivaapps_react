@@ -21,10 +21,10 @@ const Logo = ({
       <h1 className="m-0">
         <Link to="/">
           <Image
-            src={require('./../../../assets/images/logo.svg')}
-            alt="Open"
-            width={32}
-            height={32} />
+            src={require('./../../../assets/images/shiva_pendem.png')}
+            alt="Shiva Apps"
+            width={72}
+            height={72} />
         </Link>
       </h1>
     </div>

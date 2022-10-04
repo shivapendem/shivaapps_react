@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -33,15 +33,6 @@ const ContactSplit = ({
   const [email, setEmail] = useState("suppor@gmail.com");
   const [message, setMessage] = useState("sample name ");
 
-  const  onNameChange= async (event) => {
-    setName( event.target.value);
-  };
-const  onEmailChange= async (event) => {
-    setEmail( event.target.value);
-  };
-const  onMessageChange= async (event) => {
-    setMessage(event.target.value)
-  };
 const  handleSubmit= async (event) => {
     event.preventDefault();
     console.log(name);
@@ -117,14 +108,30 @@ const  handleSubmit= async (event) => {
     
 
 
-            <div className="split-item">
+
+            <div className="split-item" >
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
-              <Image
-                  src={require('./../../assets/images/features-split-image-03.png')}
-                  alt="Features split 03"
-                  width={528}
-                  height={396} />
-              
+                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                  
+                <form id="contact-form" method="POST" onSubmit={handleSubmit.bind(this)}>
+                    <div className="form-group">
+                        <label htmlFor="name" className='text-xxs'>Name</label>
+                        <input type="text" className="form-control" placeholder='Your Name' onKeyUp={(event) => {setName(event.target.value);}} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1" className='text-xxs'>Email address</label>
+                        <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' onKeyUp={(event) => {setEmail(event.target.value);}} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message" className='text-xxs'>Message</label>
+                        <textarea className="form-control" rows="5" placeholder='Your Message / Query' onKeyUp={(event) => {setMessage(event.target.value);}}   ></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form> 
+                </div>
+
+
+
               </div>
               <div className={
                 classNames(
@@ -132,33 +139,13 @@ const  handleSubmit= async (event) => {
                   imageFill && 'split-item-image-fill'
                 )}
                 data-reveal-container=".split-item">
-                <form id="contact-form" method="POST" onSubmit={handleSubmit.bind(this)}>
-                <div className="form-group">
-                    <label htmlFor="name" className='text-xxs'>Name</label>
-                    <input type="text" className="form-control" placeholder='Your Name' onKeyUp={(event) => {setName(event.target.value);}} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmail1" className='text-xxs'>Email address</label>
-                    <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' onKeyUp={(event) => {setEmail(event.target.value);}} />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message" className='text-xxs'>Message</label>
-                    <textarea className="form-control" rows="5" placeholder='Your Message / Query' onKeyUp={(event) => {setMessage(event.target.value);}}   ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form> 
+                <Image
+                  src={require('./../../assets/images/features-split-image-03.png')}
+                  alt="Features split 03"
+                  width={528}
+                  height={396} />
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">

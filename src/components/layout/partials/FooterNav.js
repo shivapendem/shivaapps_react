@@ -19,16 +19,19 @@ const FooterNav = ({
     >
       <ul className="list-reset">
         <li>
+          <Link to="/about">About us</Link>
+        </li>
+        <li>
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="#0">About us</Link>
+          <a href="https://shivapendem.medium.com/" target="_blank"  rel="noopener noreferrer">Medium</a>
         </li>
         <li>
-          <Link to="#0">FAQ's</Link>
+          <a href="https://www.npmjs.com/~shivapendem"  rel="noopener noreferrer">Npm Js</a>
         </li>
         <li>
-          <Link to="#0">Support</Link>
+          <a href="https://play.google.com/store/apps/developer?id=Shiva+Apps&hl=en&gl=US"  rel="noopener noreferrer">Play Store</a>
         </li>
       </ul>
     </nav>

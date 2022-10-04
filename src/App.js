@@ -12,6 +12,7 @@ import Home from './views/Home';
 import Contact from './views/Contact';
 import About from './views/About';
 import Page404 from './views/404';
+import ScrollToTop from './ScrollToTop';
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -35,16 +36,19 @@ const App = () => {
   }, [location]);
 
   return (
+    <div>
+    <ScrollToTop/>
     <ScrollReveal
       ref={childRef}
       children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-          <AppRoute exact path="/contact" component={Contact} layout={LayoutDefault} />
-          <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
-          <AppRoute exact path="*" component={Page404} layout={LayoutDefault} />
-        </Switch>
+          <Switch>
+            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+            <AppRoute exact path="/contact" component={Contact} layout={LayoutDefault} />
+            <AppRoute exact path="/about" component={About} layout={LayoutDefault} />
+            <AppRoute exact path="*" component={Page404} layout={LayoutDefault} />
+          </Switch>
       )} />
+    </div>
   );
 }
 

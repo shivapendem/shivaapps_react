@@ -87,7 +87,7 @@ const AboutView = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/shivaapps_about_1.jpeg')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>
@@ -114,7 +114,7 @@ const AboutView = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/features-split-image-02.png')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>
@@ -145,7 +145,7 @@ const AboutView = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/tailoryourideas.png')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>

@@ -29,9 +29,9 @@ const ContactSplit = ({
   ...props
 }) => {
 
-  const [name, setName] = useState("test name");
-  const [email, setEmail] = useState("suppor@gmail.com");
-  const [message, setMessage] = useState("sample name ");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
 const  handleSubmit= async (event) => {
     event.preventDefault();
@@ -116,15 +116,15 @@ const  handleSubmit= async (event) => {
                 <form id="contact-form" method="POST" onSubmit={handleSubmit.bind(this)}>
                     <div className="form-group">
                         <label htmlFor="name" className='text-xxs'>Name</label>
-                        <input type="text" className="form-control" placeholder='Your Name' onKeyUp={(event) => {setName(event.target.value);}} />
+                        <input type="text" className="form-control" placeholder='Your Name' value={name} onChange={(event) => {setName(event.target.value);}} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1" className='text-xxs'>Email address</label>
-                        <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' onKeyUp={(event) => {setEmail(event.target.value);}} />
+                        <input type="email" className="form-control" aria-describedby="emailHelp" placeholder='Your Email' value={email} onChange={(event) => {setEmail(event.target.value);}} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message" className='text-xxs'>Message</label>
-                        <textarea className="form-control" rows="5" placeholder='Your Message / Query' onKeyUp={(event) => {setMessage(event.target.value);}}   ></textarea>
+                        <textarea className="form-control" rows="5" placeholder='Your Message / Query' value={message} onChange={(event) => {setMessage(event.target.value);}}   ></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form> 
@@ -141,7 +141,7 @@ const  handleSubmit= async (event) => {
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/features-split-image-03.png')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>
@@ -166,7 +166,7 @@ const  handleSubmit= async (event) => {
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/features-split-image-03.png')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>

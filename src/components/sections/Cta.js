@@ -27,7 +27,7 @@ const Cta = ({
   ...props
 }) => {
 
-const [subscribeEmail, setSubscribeEmail] = useState("suppor@gmail.com");
+const [subscribeEmail, setSubscribeEmail] = useState("");
 
 
 const  handleSubscribe= async (event) => {
@@ -88,7 +88,7 @@ const  handleSubscribe= async (event) => {
           </div>
           <div className="cta-action">
           <form id="contact-form" method="POST" onSubmit={handleSubscribe.bind(this)}>
-            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your best email"  onKeyUp={(event) => {setSubscribeEmail(event.target.value);}}>
+            <Input id="newsletter" type="email" label="Subscribe" labelHidden hasIcon="right" placeholder="Your best email"  value={subscribeEmail} onChange={(event) => {setSubscribeEmail(event.target.value);}}>
               <svg width="16" height="12" xmlns="http://www.w3.org/2000/svg" onSubmit={handleSubscribe.bind(this)}>
                 <path d="M9 5H1c-.6 0-1 .4-1 1s.4 1 1 1h8v5l7-6-7-6v5z" fill="#376DF9" />
               </svg>

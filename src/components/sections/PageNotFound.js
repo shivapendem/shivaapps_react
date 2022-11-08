@@ -66,7 +66,7 @@ const PageNotFound = ({
             <div>
                <Image
                   src="https://img.freepik.com/free-vector/glitch-error-404-page_23-2148105404.jpg?w=2000"
-                  alt="Features split 02"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
             </div>
@@ -94,7 +94,7 @@ const PageNotFound = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/features-split-image-02.png')}
-                  alt="Features split 02"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>
@@ -120,7 +120,7 @@ const PageNotFound = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/features-split-image-03.png')}
-                  alt="Features split 03"
+                  alt="Shiva Pendem"
                   width={528}
                   height={396} />
               </div>
